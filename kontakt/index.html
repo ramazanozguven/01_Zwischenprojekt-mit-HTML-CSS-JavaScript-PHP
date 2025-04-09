@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <title>Schwandorf Automobile</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="
+    Die größte Dodge Nitro Vertriebsgesellschaft in Europa, Auto kaufen, Dodge Nitro in Deutschland zum Kaufen,
+    ich möchte mein Auto verkaufen, dodge nitro, ich möchte mein Auto verkaufen, ,The largest Dodge Nitro sales company in Europe, buy a car, I want to sell my car, dodge nitro, I want to sell my car,,Avrupa'daki en büyük Dodge Nitro satis firmasi, araba satin al, arabami satmak istiyorum, dodge nitro, arabami satmak istiyorum, "
+    />
+    <meta name="keywords" content="auto kaufen" />
+    <!--site anahtari-->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+    <link rel="shortcut icon" type="image/png" href="favicon.png" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
+    <!--site anahtari-->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <style>
+      body {
+        background: url(/dodgeresim.jpg);
+
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+      }
+      .menu {
+        width: 100%;
+        /* background-color: #05386b; */
+        padding: 0;
+      }
+      .menu ul {
+        margin-left: 30px;
+        padding: 0;
+        width: 100%;
+      }
+      .menu ul li {
+        list-style-type: none;
+        display: inline-block;
+        padding: 10px;
+        margin: 0;
+        line-height: 50px;
+        text-align: center;
+      }
+      .menu a {
+        width: 100%;
+        text-decoration: none;
+        font-size: 20px;
+        padding: 0;
+        color: black;
+        font-weight: bolder;
+        display: block;
+        background-color: white;
+        border-radius: 10px;
+      }
+      .menu a:hover {
+        color: black;
+        background-color: yellowgreen;
+        box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 1.6);
+      }
+      .menu a.active {
+        color: black;
+        background-color: yellowgreen;
+      }
+      .kontrol {
+        position: relative;
+        font-size: 40px;
+        float: right;
+        line-height: 60px;
+        padding: 10px;
+        color: black;
+        /* margin-right: 20px; */
+        cursor: pointer;
+        display: none;
+      }
+      #kontrol {
+        display: none;
+      }
+
+      @media (max-width: 800px) {
+        body {
+          width: 100%;
+        }
+        html::-webkit-scrollbar {
+          display: none;
+          width: 0px;
+          margin: 0;
+          padding: 0;
+        }
+
+        .kontrol {
+          display: block;
+          padding: 0px;
+          height: 55px;
+          width: 14%;
+          margin-left: 270px;
+          margin-top: -15px;
+          text-align: center;
+          z-index: 3;
+          background-color: orange;
+          position: fixed;
+          border: 3px solid black;
+        }
+        .menu {
+          position: fixed;
+          margin: 0;
+          padding: 0;
+          width: 100%;
+          z-index: 3;
+        }
+        .menu ul {
+          position: absolute;
+          margin-top: 70px;
+          margin-left: 0;
+          width: 100%;
+          box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.5);
+          display: none;
+        }
+        .menu ul li {
+          display: block;
+          margin: 0;
+          padding: 0;
+          width: 100%;
+        }
+        .menu a {
+          width: 100%;
+          font-size: 30px;
+          line-height: 70px;
+          border-radius: 0;
+          border-bottom: 1px dotted gray;
+        }
+
+        .header .menu ul li a:hover {
+          color: black;
+          background-color: green;
+          box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 1.6);
+        }
+
+        #kontrol:checked ~ ul {
+          display: block;
+        }
+        #mainpost {
+          padding: 1px;
+          width: 100%;
+        }
+        #mainpost h1 {
+          font-size: 3rem;
+        }
+
+        .home .content h3 {
+          font-size: 5rem;
+        }
+        .review .heading {
+          flex-flow: wrap;
+          font-size: 3rem;
+        }
+        .gotopbtn {
+          margin: 0;
+          padding: 0;
+        }
+        .header .logo {
+          display: none;
+        }
+        .home .content {
+          max-width: 100%;
+          margin-top: 50%;
+          padding-top: 350px;
+        }
+        .home .content h3 {
+          font-size: 4rem;
+          text-transform: uppercase;
+          color: var(--black-color);
+          text-decoration: underline;
+        }
+        .home .content p {
+          font-size: 2rem;
+          font-weight: 300;
+          line-height: 1.5;
+          padding: 1rem 0;
+          color: var(--black-color);
+          font-weight: bold;
+        }
+
+        .footer .links {
+          display: block;
+          padding: 0px;
+          height: 50rem;
+          text-align: center;
+          z-index: 3;
+        }
+        .footer .links li {
+          display: grid;
+          margin-bottom: 10px;
+          font-size: 2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <a href="/index.html" class="logo">
+        <img src="logo.png" alt="logo" />
+      </a>
+
+      <!--! HEADER START -->
+      <div class="menu">
+        <input type="checkbox" id="kontrol" />
+        <label for="kontrol" class="kontrol">
+          <i class="fa fa-bars"> </i>
+        </label>
+
+        <ul>
+          <li>
+            <a href="/index.html"><i class="fa-solid fa-house"></i> HOME</a>
+          </li>
+          <li>
+            <a href="/anzeigen/index.html"
+              ><i class="fa-solid fa-car"></i> ANZEIGEN</a
+            >
+          </li>
+          <li>
+            <a href="index.html" class="active"
+              ><i class="fa-solid fa-user"></i> KONTAKT</a
+            >
+          </li>
+          <li>
+            <a href="/gallerie/index.html"
+              ><i class="fa-solid fa-image"></i> GALLERIE</a
+            >
+          </li>
+          <li>
+            <a href="/blog/index.html"
+              ><i class="fa-brands fa-blogger-b"></i> BLOG</a
+            >
+          </li>
+        </ul>
+      </div>
+    </header>
+    <!--! HEADER END -->
+
+    <!--! ABOUT US START -->
+
+    <section class="about">
+      <br /><br /><br /><br /><br /><br />
+
+      <h1 class="heading">
+        <i class="fa-solid fa-user"></i> ÜBER UNS <span></span>
+      </h1>
+      <div class="row">
+        <div class="image">
+          <img src="profilresim.jpg" alt="profil" />
+        </div>
+        <div class="content">
+          <h3>Herr Ordu</h3>
+
+          <p>
+            Sie können mich für den An- und Verkauf von Dodge Nitro und allen
+            anderen Fahrzeugen kontaktieren.
+          </p>
+
+          <p class="adresp">
+            <i class="fa-solid fa-location-dot"></i> Hochweg 17,
+            DE-72221,Haiterbach
+          </p>
+
+          <p class="adresp">
+            <i class="fa-solid fa-mobile-screen"></i>
+            +49 7456-2569943
+          </p>
+          <p class="adresp">
+            <i class="fa-solid fa-phone-volume"></i> +49 172-7231391
+          </p>
+          <p class="adresp">
+            <i class="fa-solid fa-envelope"></i> No911@gmx.de
+          </p>
+          <p class="adresp">
+            <i class="fa-solid fa-clock"></i> Montag bis Samstag (08:00-17:00)
+          </p>
+          <p class="adresp">
+            <i class="fa-solid fa-language"></i> Deutsch und Englisch
+          </p>
+          <p class="adresp">
+            <a target="_blank" href="https://home.mobile.de/ORDU#ses"
+              ><i class="fa-solid fa-car"></i> mobile.de (
+              Autoverkaufsanzeigen)</a
+            >
+          </p>
+          <p class="adresp">
+            <a
+              target="_blank"
+              href="https://www.autoscout24.de/haendler/schwandorf-automobile"
+              ><i class="fa-solid fa-car"></i> autoscout24.de (
+              Autoverkaufsanzeigen)</a
+            >
+          </p>
+
+          <div>
+            <ul class="ustMenu">
+              <li>
+                <a
+                  href="https://wa.me/491727231391?text=Sie%20erreichen%20mich%20direkt%20über%20Whatsapp."
+                  target="_blank"
+                  class="whatsapp"
+                >
+                  <i class="fa-brands fa-whatsapp"></i
+                ></a>
+              </li>
+
+              <li>
+                <a href="mailto:No911@gmx.de" target="_blank" class="eposta"
+                  ><i class="fa-solid fa-at"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--! ABOUT US END -->
+
+    <!--! CONTACT US START -->
+    <section class="contact">
+      <h1 class="heading">
+        <i class="fa-solid fa-map-location-dot"></i> MAPS <span></span>
+      </h1>
+      <div class="row">
+        <iframe
+          class="map"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2641.1431753242464!2d8.664675899999999!3d48.54965!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47974f861d6d1e19%3A0x196a8ebd4659503!2sHochweg%2017%2C%2072221%20Haiterbach!5e0!3m2!1str!2sde!4v1673028240887!5m2!1str!2sde"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          height="500rem"
+        ></iframe>
+
+        <!-- <form>
+            <h3>KONTAKTFORMULAR</h3>
+  
+            <div class="inputBox">
+              <i class="fas fa-user"></i>
+              <input type="text" placeholder="Ihren Vor- und Nachnamen" />
+            </div>
+  
+            <div class="inputBox">
+              <i class="fas fa-envelope"></i>
+              <input type="email" placeholder="Ihre Nachricht" />
+            </div>
+  
+            <div class="inputBox">
+              <i class="fas fa-phone"></i>
+              <input type="number" placeholder="Ihre Telefonnummer" />
+            </div>
+  
+            <input type="submit" class="btn" value="Kontakt jetzt" />
+          </form> -->
+      </div>
+    </section>
+    <!--! CONTACT US END -->
+
+    <main id="mainpost">
+      <h1 class="heading">
+        <i class="fa-solid fa-file-signature"></i> KONTAKTFORMULAR <span></span>
+      </h1>
+      <h2 style="color: red">Nehmen Sie Kontakt zu uns auf!</h2>
+
+      <form action="contact.php" method="post">
+        <p>
+          Bei Fragen und Anregungen füllen Sie bitte dieses Formular aus. Wir
+          werden uns bemühen, umgehend zu antworten.
+        </p>
+
+        <br />
+        <div>
+          <label for="salut">Anrede:<span class="required">*</span></label>
+          <select
+            style="color: black; font-size: 2rem; font-weight: bold"
+            name="salut"
+            id="salut"
+            required
+          >
+            <option disabled selected value="">Ihre Anrede</option>
+            <option value="Frau">Frau</option>
+            <option value="Herr">Herr</option>
+            <option value="Divers">Divers</option>
+            <option value="Fräulein">Fräulein</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="lname">Nachname:<span class="required">*</span></label>
+          <input
+            style="color: black; font-size: 2rem; font-weight: bold"
+            type="text"
+            id="lname"
+            name="lname"
+            required
+            placeholder="Ihr Nachname"
+            maxlength="30"
+          />
+        </div>
+
+        <div>
+          <label for="fname">Vorname:<span class="required">*</span></label>
+          <input
+            style="color: black; font-size: 2rem; font-weight: bold"
+            type="text"
+            id="fname"
+            name="fname"
+            required
+            placeholder="Ihr Vorname"
+            maxlength="30"
+          />
+        </div>
+
+        <div>
+          <label for="email">E-Mail:<span class="required">*</span></label>
+          <input
+            style="color: black; font-size: 2rem; font-weight: bold"
+            type="email"
+            id="email"
+            name="email"
+            required
+            placeholder="Ihre E-Mail"
+            maxlength="30"
+          />
+        </div>
+
+        <div>
+          <label for="phone">Telefon:</label>
+          <input
+            style="color: black; font-size: 2rem; font-weight: bold"
+            type="tel"
+            id="phone"
+            name="phone"
+            placeholder="Ihre Telefonnummer"
+            maxlength="30"
+          />
+        </div>
+
+        <div>
+          <label for="message"
+            >Ihre Nachricht:<span class="required">*</span></label
+          >
+          <textarea
+            style="color: black; font-size: 2.7rem; font-weight: bold"
+            name="message"
+            id="message"
+            required
+            placeholder="Ihre Nachricht an uns"
+            cols="50"
+            rows="12"
+            maxlength="1000"
+          ></textarea>
+        </div>
+
+        <!-- Diğer form alanları SITE_ANAHTARI-->
+        <div
+          class="g-recaptcha"
+          data-sitekey="6LdrVKImAAAAAALZM3WwOYuQ7XCxT5nDCDAB8lIj"
+        ></div>
+
+        <div>
+          <label for="button">Absenden:</label>
+          <button type="submit" class="btn" name="button">Absenden</button>
+          <!-- /*id="button"*/ -->
+        </div>
+      </form>
+      <p>
+        <span style="font-weight: bold" class="required"
+          >* = Pflichtangabe</span
+        >
+      </p>
+    </main>
+
+    <!--! FOOTER START -->
+    <section class="footer">
+      <div class="share">
+        <a
+          href="https://wa.me/491727231391?text=Sie%20erreichen%20mich%20direkt%20über%20Whatsapp."
+          class="fa-brands fa-whatsapp"
+          target="_blank"
+        >
+        </a>
+
+        <a href="mailto:No911@gmx.de" class="fa-solid fa-at" target="_blank">
+        </a>
+      </div>
+
+      <div class="links">
+        <li>
+          <a href="/index.html"><i class="fa-solid fa-house"></i> HOME</a>
+        </li>
+        <li>
+          <a href="/anzeigen/index.html"
+            ><i class="fa-solid fa-car"></i> ANZEIGEN</a
+          >
+        </li>
+        <li>
+          <a href="index.html" class="active"
+            ><i class="fa-solid fa-user"></i> KONTAKT</a
+          >
+        </li>
+        <li>
+          <a href="/gallerie/index.html"
+            ><i class="fa-solid fa-image"></i> GALLERIE</a
+          >
+        </li>
+        <li>
+          <a href="/blog/index.html"
+            ><i class="fa-brands fa-blogger-b"></i> BLOG</a
+          >
+        </li>
+        <li>
+          <a
+            style="color: black; background-color: yellow"
+            href="/impressum.html"
+            >impressum</a
+          >
+        </li>
+      </div>
+
+      <div class="credit">
+        &copy;2023, gemacht mit viel &hearts; von Ramazan ÖZGÜVEN.
+      </div>
+      <a class="gotopbtn" href="#"><i class="fa-solid fa-arrow-up"></i></a>
+    </section>
+
+    <!--! FOOTER END -->
+  </body>
+</html>

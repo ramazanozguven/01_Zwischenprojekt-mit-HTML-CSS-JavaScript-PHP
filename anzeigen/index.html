@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <title>Schwandorf Automobile</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="
+    Die größte Dodge Nitro Vertriebsgesellschaft in Europa, Auto kaufen, Dodge Nitro in Deutschland zum Kaufen,
+    ich möchte mein Auto verkaufen, dodge nitro, ich möchte mein Auto verkaufen, ,The largest Dodge Nitro sales company in Europe, buy a car, I want to sell my car, dodge nitro, I want to sell my car,,Avrupa'daki en büyük Dodge Nitro satis firmasi, araba satin al, arabami satmak istiyorum, dodge nitro, arabami satmak istiyorum, "
+    />
+    <meta name="keywords" content="auto kaufen" />
+    <link rel="shortcut icon" type="image/png" href="favicon.png" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="lightbox.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
+    <style>
+      body {
+        background: url(/dodgeresim.jpg);
+
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+      }
+      .menu {
+        width: 100%;
+        /* background-color: #05386b; */
+        padding: 0;
+      }
+      .menu ul {
+        margin-left: 30px;
+        padding: 0;
+        width: 100%;
+      }
+      .menu ul li {
+        list-style-type: none;
+        display: inline-block;
+        padding: 10px;
+        margin: 0;
+        line-height: 50px;
+        text-align: center;
+      }
+      .menu a {
+        width: 100%;
+        text-decoration: none;
+        font-size: 20px;
+        padding: 0;
+        color: black;
+        font-weight: bolder;
+        display: block;
+        background-color: white;
+        border-radius: 10px;
+      }
+      .menu a:hover {
+        color: black;
+        background-color: yellowgreen;
+        box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 1.6);
+      }
+      .menu a.active {
+        color: black;
+        background-color: yellowgreen;
+      }
+      .kontrol {
+        position: relative;
+        font-size: 40px;
+        float: right;
+        line-height: 60px;
+        padding: 10px;
+        color: black;
+        /* margin-right: 20px; */
+        cursor: pointer;
+        display: none;
+      }
+      #kontrol {
+        display: none;
+      }
+
+      @media (max-width: 800px) {
+        * {
+          width: -150%;
+        }
+        body {
+          width: 100%;
+        }
+        html::-webkit-scrollbar {
+          display: none;
+          width: 0px;
+          margin: 0;
+          padding: 0;
+        }
+
+        .kontrol {
+          display: block;
+          padding: 0px;
+          height: 55px;
+          width: 14%;
+          margin-left: 270px;
+          margin-top: -15px;
+          text-align: center;
+          z-index: 3;
+          background-color: orange;
+          position: fixed;
+          border: 3px solid black;
+        }
+        .menu {
+          position: fixed;
+          margin: 0;
+          padding: 0;
+          width: 100%;
+          z-index: 3;
+        }
+        .menu ul {
+          position: absolute;
+          margin-top: 70px;
+          margin-left: 0;
+          width: 100%;
+          box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.5);
+          display: none;
+        }
+        .menu ul li {
+          display: block;
+          margin: 0;
+          padding: 0;
+          width: 100%;
+        }
+        .menu a {
+          width: 100%;
+          font-size: 30px;
+          line-height: 70px;
+          border-radius: 0;
+          border-bottom: 1px dotted gray;
+        }
+
+        .header .menu ul li a:hover {
+          color: black;
+          background-color: green;
+          box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 1.6);
+        }
+
+        #kontrol:checked ~ ul {
+          display: block;
+        }
+        #mainpost {
+          padding: 1px;
+          width: 100%;
+        }
+        #mainpost h1 {
+          font-size: 3rem;
+        }
+
+        .home .content h3 {
+          font-size: 5rem;
+        }
+        .review .heading {
+          flex-flow: wrap;
+          font-size: 3rem;
+        }
+        .gotopbtn {
+          margin: 0;
+          padding: 0;
+        }
+        .header .logo {
+          display: none;
+        }
+        .home .content {
+          max-width: 100%;
+          margin-top: 50%;
+          padding-top: 350px;
+        }
+        .home .content h3 {
+          font-size: 4rem;
+          text-transform: uppercase;
+          color: var(--black-color);
+          text-decoration: underline;
+        }
+        .home .content p {
+          font-size: 2rem;
+          font-weight: 300;
+          line-height: 1.5;
+          padding: 1rem 0;
+          color: var(--black-color);
+          font-weight: bold;
+        }
+
+        .footer .links {
+          display: block;
+          padding: 0px;
+          height: 50rem;
+          text-align: center;
+          z-index: 3;
+        }
+        .footer .links li {
+          display: grid;
+          margin-bottom: 10px;
+          font-size: 2rem;
+        }
+
+        #customers,
+        #customers tr,
+        #customers td {
+          display: block;
+          margin-left: 0;
+          width: 100%;
+          border: black solid 1px;
+        }
+        #customers tr {
+          margin-bottom: 15px;
+        }
+        #customers td {
+          text-align: left;
+          padding-left: 10%;
+          position: relative;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <a href="/index.html" class="logo">
+        <img src="logo.png" alt="logo" />
+      </a>
+
+      <!--! HEADER START -->
+      <div class="menu">
+        <input type="checkbox" id="kontrol" />
+        <label for="kontrol" class="kontrol">
+          <i class="fa fa-bars"> </i>
+        </label>
+
+        <ul>
+          <li>
+            <a href="/index.html"><i class="fa-solid fa-house"></i> HOME</a>
+          </li>
+          <li>
+            <a href="index.html" class="active"
+              ><i class="fa-solid fa-car"></i> ANZEIGEN</a
+            >
+          </li>
+          <li>
+            <a href="/kontakt/index.html"
+              ><i class="fa-solid fa-user"></i> KONTAKT</a
+            >
+          </li>
+          <li>
+            <a href="/gallerie/index.html"
+              ><i class="fa-solid fa-image"></i> GALLERIE</a
+            >
+          </li>
+
+          <li>
+            <a href="/blog/index.html"
+              ><i class="fa-brands fa-blogger-b"></i> BLOG</a
+            >
+          </li>
+        </ul>
+      </div>
+    </header>
+    <!--! HEADER END -->
+
+    <br /><br /><br /><br /><br /><br /><br /><br /><br />
+
+    <!--ARAC ILAN BILGILERI start-->
+    <main style="background-color: #05386b">
+      <h2 class="weiß">Weiß Dodge Nitro SXT, 18.800 EURO</h2>
+
+      <br />
+      <div class="gallery">
+        <a
+          href="/images/weiß/3-min.jpeg"
+          data-lightbox="models"
+          data-title="Caption1"
+          ><img src="/images/weiß/3-min.jpeg"
+        /></a>
+        <a
+          href="/images/weiß/1-min.jpeg"
+          data-lightbox="models"
+          data-title="Caption2"
+          ><img src="/images/weiß/1-min.jpeg"
+        /></a>
+        <a
+          href="/images/weiß/2-min.jpeg"
+          data-lightbox="models"
+          data-title="Caption3"
+          ><img src="/images/weiß/2-min.jpeg"
+        /></a>
+        <a
+          href="/images/weiß/4-min.jpeg"
+          data-lightbox="models"
+          data-title="Caption4"
+          ><img src="/images/weiß/4-min.jpeg"
+        /></a>
+      </div>
+    </main>
+    <!--ARAC ILAN BILGILERI end-->
+
+    <!--ARABA ILAN BILGILERI TABLOSU start-->
+
+    <section class="about">
+      <h1 class="heading" style="font-size: 3rem">
+        Allgemeine Informationen zum Auto Dodge Nitro <span></span>
+      </h1>
+      <div class="row">
+        <div class="content">
+          <div class="ramo">
+            <table id="customers">
+              <tr>
+                <th rowspan="6">Basisdaten</th>
+                <td>Karosserieform</td>
+                <td>SUV/Geländewagen/Pickup</td>
+              </tr>
+
+              <tr>
+                <td>Zustand</td>
+                <td>Gebraucht</td>
+              </tr>
+
+              <tr>
+                <td>Antriebsart</td>
+                <td>Allrad</td>
+              </tr>
+
+              <tr>
+                <td>Sitzplätze</td>
+                <td>5</td>
+              </tr>
+
+              <tr>
+                <td>Türen</td>
+                <td>4</td>
+              </tr>
+              <tr>
+                <td>Länderversion</td>
+                <td>Deutsche Ausführung</td>
+              </tr>
+
+              <tr>
+                <th rowspan="4">Fahrzeughistorie</th>
+                <td>Kilometerstand</td>
+                <td>33.000 km</td>
+              </tr>
+              <tr>
+                <td>Erstzulassung</td>
+                <td>06/2008</td>
+              </tr>
+              <tr>
+                <td>HU</td>
+                <td>Neu</td>
+              </tr>
+              <tr>
+                <td>Nichtraucherfahrzeug</td>
+                <td>Ja</td>
+              </tr>
+
+              <tr>
+                <th rowspan="3">Technische Daten</th>
+                <td>Leistung</td>
+                <td>130 kW (177 PS)</td>
+              </tr>
+              <tr>
+                <td>Getriebe</td>
+                <td>Automatik</td>
+              </tr>
+              <tr>
+                <td>Hubraum</td>
+                <td>2.777 cm³</td>
+              </tr>
+              <tr>
+                <th rowspan="5">Energieverbrauch</th>
+                <td>Kraftstoff</td>
+                <td>Diesel</td>
+              </tr>
+              <tr>
+                <td>Kraftstoffverbrauch</td>
+                <td>
+                  9,4 l/100 km (komb.) 12,2 l/100 km (innerorts) 7,8 l/100 km
+                  (außerorts)
+                </td>
+              </tr>
+              <tr>
+                <td>CO₂-Emissionen</td>
+                <td>250 g/km (komb.)</td>
+              </tr>
+              <tr>
+                <td>Schadstoffklasse</td>
+                <td>Euro 4</td>
+              </tr>
+              <tr>
+                <td>Umweltplakette</td>
+                <td>4 (Grün)</td>
+              </tr>
+              <tr>
+                <th>Ausstattung</th>
+                <td>Komfort</td>
+                <td>
+                  <li>Armlehne</li>
+                  <li>Einparkhilfe</li>
+                  <li>Einparkhilfe Sensoren hinten</li>
+                  <li>Elektr. Fensterheber</li>
+                  <li>Elektrische Seitenspiegel</li>
+                  <li>Elektrische Sitze</li>
+                  <li>Klimaanlage</li>
+                  <li>Klimaautomatik</li>
+                  <li>Klimaautomatik</li>
+                  <li>Multifunktionslenkrad</li>
+                  <li>Navigationssystem</li>
+                  <li>Tempomat</li>
+                </td>
+              </tr>
+              <tr>
+                <th>Ausstattung</th>
+                <td>Unterhaltung/Media</td>
+                <td>
+                  <li>Bluetooth</li>
+                  <li>CD</li>
+                  <li>Freisprecheinrichtung</li>
+                  <li>Radio</li>
+                  <li>Soundsystem</li>
+                  <li>USB</li>
+                </td>
+              </tr>
+              <tr>
+                <th>Ausstattung</th>
+                <td>Sicherheit</td>
+                <td>
+                  <li>ABS</li>
+                  <li>Alarmanlage</li>
+                  <li>Beifahrerairbag</li>
+                  <li>ESP</li>
+                  <li>Fahrerairbag</li>
+                  <li>Isofix</li>
+                  <li>Nebelscheinwerfer</li>
+                  <li>Seitenairbag</li>
+                  <li>Servolenkung</li>
+                  <li>Wegfahrsperre</li>
+                  <li>Zentralverriegelung</li>
+                </td>
+              </tr>
+              <tr>
+                <th>Ausstattung</th>
+                <td>Extras</td>
+                <td>
+                  <li>Alufelgen</li>
+                  <li>Anhängerkupplung</li>
+                  <li>Dachreling</li>
+                  <li>Touchscreen</li>
+                </td>
+              </tr>
+              <tr>
+                <th>Sonstige Informationen</th>
+                <td>Fahrzeugbeschreibung</td>
+                <td>
+                  Hat Ihr Nachbar nicht, wetten? Kennt er wahrscheinlich nicht
+                  mal. Ecken und Kanten wohin das Auge reicht. Mehr aufsehen
+                  erregen geht nicht. Da Blasst sogar der Nachbar mit dem
+                  100.000 Euro SUV....Alles außergewöhnlich... Als persönlicher
+                  Dodge Nitro Fahrer weiß ich wovon ich Spreche. Biete hier wohl
+                  den saubersten Nitro in der höchsten Ausstattung SXT in
+                  optisch und technisch bestem Zustand. Sammlerzustand. Stand
+                  mehr in der Garage als auf der Straße. Inspektion und Tüv bei
+                  Übergabe Neu. Nichtraucher, Garagenwagen, keine Tiere und
+                  Unfallfrei.
+                </td>
+              </tr>
+              <tr>
+                <th>Sonstige Informationen</th>
+                <td>Weitere Ausstattung</td>
+                <td>
+                  Airbag Fahrer-/Beifahrerseite, Anbauteile Wagenfarbe,
+                  Antischlupfregelung (ASR), Anzeige für Reifendruck im Display,
+                  Audiobedienung am Lenkrad, Audiosystem: Radio/MP3-Player und
+                  CD-Wechsler (6-fach), Außenspiegel elektr. verstell- und
+                  heizbar, Außentemperaturanzeige, Bordcomputer, Bremsassistent,
+                  Einparkhilfe, Innenspiegel mit Abblendautomatik,
+                  Isofix-Aufnahmen für Kindersitze, Karosserie: 5-türig,
+                  Klimaautomatik, Kompass, Kopf-Airbag-System (Windowbag) vorn +
+                  hinten, Kühlergrill verchromt, Ladeboden ausziehbar,
+                  LM-Felgen, Motor 2,8 Ltr. - 130 kW CRD, Radstand 2763 mm,
+                  Reifendruck-Kontrollsystem, Reserverad in Fahrbereifung, Sitz
+                  vorn links elektr. verstellbar, Sitzbezug / Polsterung: Stoff,
+                  Verglasung hinten abgedunkelt, Wärmeschutzverglasung
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--ARABA ILAN BILGILERI TABLOSU end-->
+
+    <!--! FOOTER START -->
+    <section class="footer">
+      <div class="share">
+        <a
+          href="https://wa.me/491727231391?text=Sie%20erreichen%20mich%20direkt%20über%20Whatsapp."
+          class="fa-brands fa-whatsapp"
+          target="_blank"
+        >
+        </a>
+
+        <a href="mailto:No911@gmx.de" class="fa-solid fa-at" target="_blank">
+        </a>
+      </div>
+
+      <div class="links">
+        <li>
+          <a href="/index.html"><i class="fa-solid fa-house"></i> HOME</a>
+        </li>
+        <li>
+          <a href="index.html" class="active"
+            ><i class="fa-solid fa-car"></i> ANZEIGEN</a
+          >
+        </li>
+        <li>
+          <a href="/kontakt/index.html"
+            ><i class="fa-solid fa-user"></i> KONTAKT</a
+          >
+        </li>
+        <li>
+          <a href="/gallerie/index.html"
+            ><i class="fa-solid fa-image"></i> GALLERIE</a
+          >
+        </li>
+
+        <li>
+          <a href="/blog/index.html"
+            ><i class="fa-brands fa-blogger-b"></i> BLOG</a
+          >
+        </li>
+        <li>
+          <a
+            style="color: black; background-color: yellow"
+            href="/impressum.html"
+            >impressum</a
+          >
+        </li>
+      </div>
+
+      <div class="credit">
+        &copy;2023, gemacht mit viel &hearts; von Ramazan ÖZGÜVEN.
+      </div>
+      <a class="gotopbtn" href="#"><i class="fa-solid fa-arrow-up"></i></a>
+    </section>
+
+    <!--! FOOTER END -->
+    <script src="lightbox-plus-jquery.js"></script>
+  </body>
+</html>

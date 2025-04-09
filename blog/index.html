@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <title>Schwandorf Automobile</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="
+    Die größte Dodge Nitro Vertriebsgesellschaft in Europa, Auto kaufen, Dodge Nitro in Deutschland zum Kaufen,
+    ich möchte mein Auto verkaufen, dodge nitro, ich möchte mein Auto verkaufen, ,The largest Dodge Nitro sales company in Europe, buy a car, I want to sell my car, dodge nitro, I want to sell my car,,Avrupa'daki en büyük Dodge Nitro satis firmasi, araba satin al, arabami satmak istiyorum, dodge nitro, arabami satmak istiyorum, "
+    />
+    <meta name="keywords" content="auto kaufen" />
+    <link rel="shortcut icon" type="image/png" href="favicon.png" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
+    <style>
+      body {
+        background: url(/dodgeresim.jpg);
+
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+      }
+      .menu {
+        width: 100%;
+        /* background-color: #05386b; */
+        padding: 0;
+      }
+      .menu ul {
+        margin-left: 30px;
+        padding: 0;
+        width: 100%;
+      }
+      .menu ul li {
+        list-style-type: none;
+        display: inline-block;
+        padding: 10px;
+        margin: 0;
+        line-height: 50px;
+        text-align: center;
+      }
+      .menu a {
+        width: 100%;
+        text-decoration: none;
+        font-size: 20px;
+        padding: 0;
+        color: black;
+        font-weight: bolder;
+        display: block;
+        background-color: white;
+        border-radius: 10px;
+      }
+      .menu a:hover {
+        color: black;
+        background-color: yellowgreen;
+        box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 1.6);
+      }
+      .menu a.active {
+        color: black;
+        background-color: yellowgreen;
+      }
+      .kontrol {
+        position: relative;
+        font-size: 40px;
+        float: right;
+        line-height: 60px;
+        padding: 10px;
+        color: black;
+        /* margin-right: 20px; */
+        cursor: pointer;
+        display: none;
+      }
+      #kontrol {
+        display: none;
+      }
+
+      @media (max-width: 800px) {
+        body {
+          width: 100%;
+        }
+        html::-webkit-scrollbar {
+          display: none;
+          width: 0px;
+          margin: 0;
+          padding: 0;
+        }
+
+        .kontrol {
+          display: block;
+          padding: 0px;
+          height: 55px;
+          width: 14%;
+          margin-left: 270px;
+          margin-top: -15px;
+          text-align: center;
+          z-index: 3;
+          background-color: orange;
+          position: fixed;
+          border: 3px solid black;
+        }
+        .menu {
+          position: fixed;
+          margin: 0;
+          padding: 0;
+          width: 100%;
+          z-index: 3;
+        }
+        .menu ul {
+          position: absolute;
+          margin-top: 70px;
+          margin-left: 0;
+          width: 100%;
+          box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.5);
+          display: none;
+        }
+        .menu ul li {
+          display: block;
+          margin: 0;
+          padding: 0;
+          width: 100%;
+        }
+        .menu a {
+          width: 100%;
+          font-size: 30px;
+          line-height: 70px;
+          border-radius: 0;
+          border-bottom: 1px dotted gray;
+        }
+
+        .header .menu ul li a:hover {
+          color: black;
+          background-color: green;
+          box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 1.6);
+        }
+
+        #kontrol:checked ~ ul {
+          display: block;
+        }
+        #mainpost {
+          padding: 1px;
+          width: 100%;
+        }
+        #mainpost h1 {
+          font-size: 3rem;
+        }
+
+        .home .content h3 {
+          font-size: 5rem;
+        }
+        .review .heading {
+          flex-flow: wrap;
+          font-size: 3rem;
+        }
+        .gotopbtn {
+          margin: 0;
+          padding: 0;
+        }
+        .header .logo {
+          display: none;
+        }
+        .home .content {
+          max-width: 100%;
+          margin-top: 50%;
+          padding-top: 350px;
+        }
+        .home .content h3 {
+          font-size: 4rem;
+          text-transform: uppercase;
+          color: var(--black-color);
+          text-decoration: underline;
+        }
+        .home .content p {
+          font-size: 2rem;
+          font-weight: 300;
+          line-height: 1.5;
+          padding: 1rem 0;
+          color: var(--black-color);
+          font-weight: bold;
+        }
+
+        .footer .links {
+          display: block;
+          padding: 0px;
+          height: 50rem;
+          text-align: center;
+          z-index: 3;
+        }
+        .footer .links li {
+          display: grid;
+          margin-bottom: 10px;
+          font-size: 2rem;
+        }
+
+        #customers,
+        #customers tr,
+        #customers td {
+          display: block;
+          margin-left: 0;
+          width: 100%;
+          border: black solid 1px;
+        }
+        #customers tr {
+          margin-bottom: 15px;
+        }
+        #customers td {
+          text-align: left;
+          padding-left: 10%;
+          position: relative;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <a href="/index.html" class="logo">
+        <img src="logo.png" alt="logo" />
+      </a>
+
+      <!--! HEADER START -->
+      <div class="menu">
+        <input type="checkbox" id="kontrol" />
+        <label for="kontrol" class="kontrol">
+          <i class="fa fa-bars"> </i>
+        </label>
+
+        <ul>
+          <li>
+            <a href="/index.html"><i class="fa-solid fa-house"></i> HOME</a>
+          </li>
+          <li>
+            <a href="/anzeigen/index.html"
+              ><i class="fa-solid fa-car"></i> ANZEIGEN</a
+            >
+          </li>
+          <li>
+            <a href="/kontakt/index.html"
+              ><i class="fa-solid fa-user"></i> KONTAKT</a
+            >
+          </li>
+          <li>
+            <a href="/gallerie/index.html"
+              ><i class="fa-solid fa-image"></i> GALLERIE</a
+            >
+          </li>
+          <li>
+            <a href="index.html" class="active"
+              ><i class="fa-brands fa-blogger-b"></i> BLOG</a
+            >
+          </li>
+        </ul>
+      </div>
+    </header>
+    <!--! HEADER END -->
+
+    <!--! blog -->
+    <section class="about">
+      <br /><br /><br /><br /><br /><br />
+      <h1 class="heading">Vorstellung für Company <span></span></h1>
+      <div class="row">
+        <div class="image">
+          <img src="logo.png" alt="profil" />
+        </div>
+        <div class="content">
+          <p class="adresp">
+            Schwandorf Automobile, die An- und Verkaufsgesellschaft der größten
+            Dodge Nitro Fahrzeuge in Europa, gehört seit vielen Jahren zu den
+            Vorreitern in Sachen Qualität und Vertrauen.
+            <br /><br />
+            Alle anderen Fahrzeuge werden ebenfalls gekauft und verkauft. Für
+            alle Ihre anderen Fragen, wie z. B. Fahrzeugwechsel, kontaktieren
+            Sie uns bitte.
+            <br /><br />
+            Allein seit 2016 wurden meine Fahrzeuganzeigen mehr als 90.000 Mal
+            aufgerufen.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="about">
+      <h1 class="heading">QR-Code für Website <span></span></h1>
+      <div class="row">
+        <div class="image">
+          <img src="/qrkod.png" alt="profil" />
+        </div>
+        <div class="content">
+          <p class="adresp">
+            Über den nebenstehenden QR-Code können Sie unsere Website direkt
+            erreichen oder Ihren Freunden weiterempfehlen.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="about">
+      <h1 class="heading">
+        Häufig gestellte Fragen <span>(Klick mich !)</span>
+      </h1>
+      <div class="row">
+        <div class="image">
+          <img src="/faq.png" alt="profil" />
+        </div>
+        <div class="content">
+          <details>
+            <summary>Bewertungen für Schwandorf Automobile</summary>
+            <p>
+              Über diesen Link finden Sie Kundenkommentare zu unserem
+              Unternehmen.
+              <a href="https://www.mobile.de/bewertungen/Ordu#1"
+                >11 Bewertungen</a
+              >
+            </p>
+          </details>
+
+          <details>
+            <summary>Wie kann ich Fahrzeuganzeigen sehen?</summary>
+            <p>
+              Auf den folgenden Webseiten können Sie meine Fahrzeuginserate
+              einsehen.
+              <br />
+              <a target="_blank" href="https://home.mobile.de/ORDU#ses"
+                >MOBILE.DE</a
+              >
+              <br />
+              <a
+                target="_blank"
+                href="https://www.autoscout24.de/haendler/schwandorf-automobile"
+                >AUTOSCOUT.DE</a
+              >
+            </p>
+          </details>
+
+          <details>
+            <summary>Historische Informationen zu Dodge Nitro</summary>
+            <p>
+              <a href="https://de.wikipedia.org/wiki/Dodge_Nitro">Wikipedia</a>
+            </p>
+          </details>
+
+          <details>
+            <summary>In welcher Sprache kann ich kommunizieren?</summary>
+            <p>Deutsch oder Englisch</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="about">
+      <h1 class="heading">PDF-Dokument für die Kommunikation <span></span></h1>
+      <div class="row">
+        <div class="image">
+          <img src="/pdf.png" alt="profil" />
+        </div>
+        <div class="content">
+          <div class="download">
+            <h3>Download-Links für Kontaksinformationen</h3>
+            <br />
+            <p style="font-size: 2rem">
+              Wir haben unsere Kontaktinformationen als PDF auf die Seite
+              hochgeladen, um unsere Fahrzeuge genauer zu sehen und sie für Sie
+              leichter zu erreichen, nachdem Sie sich für einen Test entschieden
+              haben. Es wird praktisch und einfach zu drucken sein, gute Reise.
+            </p>
+            <ul>
+              <li style="font-size: 2rem; color: white">
+                <a target="_blank" style="color: white" href="pdfkontakt.pdf "
+                  ><i style="color: red" class="fa-solid fa-download"></i>
+                  Pdf-Datei herunterladen</a
+                >
+              </li>
+              <p style="font-size: 2rem">
+                Sie können auch meine Visitenkarteninformationen herunterladen und mich kontaktieren. Bitte vergessen Sie nicht, mich Ihren Freunden zu empfehlen :))
+              </p>
+              <ul>
+                <li style="font-size: 2rem; color: white">
+                  <a target="_blank" style="color: white" href="visitenkarte.png"
+                    ><i style="color: red" class="fa-solid fa-download"></i>
+                    Visitenkarte herunterladen</a
+                  >
+                </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about">
+      <h1 class="heading">Tag- und Nachtmodus für die Website <span></span></h1>
+      <div class="row">
+        <div class="image">
+          <img src="/modus.png" alt="profil" />
+        </div>
+        <div class="content">
+          <p class="adresp">
+            🌓 Sie können die Website im Tag- oder Nachtmodus verwenden, indem
+            Sie auf das Zeichen unten rechts auf der Seite klicken. 🌓
+          </p>
+        </div>
+      </div>
+    </section>
+    <!--! blog END -->
+    <!--! review start -->
+    <section class="review">
+      <br /><br /><br /><br /><br /><br />
+      <h1 class="heading">
+        <i class="fa-solid fa-comment-dots"></i> KUNDENBEWERTUNGEN <span></span>
+      </h1>
+      <div class="box-container">
+        <div class="box">
+          <img src="/images/quote.png" alt="quote" />
+          <p>
+            Wir haben uns bei Schwandorf Automobile einen Nissan Navara gekauft.
+            Das Hauptgeschäft liegt aber eigentlich bei Dodge Nitros. :) Ordu
+            war von Anfang bis Ende total freundlich und sehr kundenorientiert.
+            Als ich den Wagen abgeholt habe, hat er mich vom Bahnhof abgeholt,
+            damit ich nicht noch mit dem Bus durch die Gegend gurken musste.
+            DANKE! Wir können nur positive Worte verlieren. :) Bleib gesund und
+            alles Gute!
+          </p>
+
+          <img src="/images/avatar-1.png" alt="avatar" class="user" />
+          <h3>N. P.</h3>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+        </div>
+
+        <div class="box">
+          <img src="/images/quote.png" alt="quote" />
+          <p>
+            Ich habe ein Auto von Herrn Ordu gekauft und er hat mir in jeder
+            Hinsicht sehr geholfen. Neben der Qualität und Ausstattung des Autos
+            hat es mich sehr gefreut, dass alle meine Fragen beantwortet wurden.
+            Ich kann Schwandorf Automobile jedem empfehlen. Herzlichen Dank für
+            alles. :))
+            <br />
+            <br />
+            <br />
+            <br />
+          </p>
+
+          <img src="/images/avatar-2.png" alt="avatar" class="user" />
+          <h3>R.O.</h3>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+        </div>
+
+        <div class="box">
+          <img src="/images/quote.png" alt="quote" />
+          <p>
+            Mein ertes Auto in Deutschland habe ich bei Herrn Ordu gekauft und
+            war sehr zufrieden. Von Anfang bis Ende hat er sich um alles
+            gekümmert. 👍🏼
+            <br />
+            Ich habe es letztes Jahr bei Herr Ordu gekauft. Und ich bin sehr
+            zufrieden.
+            <br />
+            Herr Ordu gibt klare und genaue Informationen über die Autos, die er
+            verkaufen wird, und hilft auch bei unerwarteten Pannen nach dem
+            Verkauf. Gefällt mir
+
+            <br />
+          </p>
+          <img src="/images/avatar-3.png" alt="avatar" class="user" />
+          <h3>...</h3>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+        </div>
+      </div>
+      <br />
+    </section>
+
+    <!--! review end -->
+
+    <!--! FOOTER START -->
+    <section class="footer">
+      <div class="share">
+        <a
+          href="https://wa.me/491727231391?text=Sie%20erreichen%20mich%20direkt%20über%20Whatsapp."
+          class="fa-brands fa-whatsapp"
+          target="_blank"
+        >
+        </a>
+
+        <a href="mailto:No911@gmx.de" class="fa-solid fa-at" target="_blank">
+        </a>
+      </div>
+
+      <div class="links">
+        <li>
+          <a href="/index.html"><i class="fa-solid fa-house"></i> HOME</a>
+        </li>
+        <li>
+          <a href="/anzeigen/index.html"
+            ><i class="fa-solid fa-car"></i> ANZEIGEN</a
+          >
+        </li>
+        <li>
+          <a href="/kontakt/index.html"
+            ><i class="fa-solid fa-user"></i> KONTAKT</a
+          >
+        </li>
+        <li>
+          <a href="/gallerie/index.html"
+            ><i class="fa-solid fa-image"></i> GALLERIE</a
+          >
+        </li>
+        <li>
+          <a href="index.html" class="active"
+            ><i class="fa-brands fa-blogger-b"></i> BLOG</a
+          >
+        </li>
+        <li>
+          <a
+            style="color: black; background-color: yellow"
+            href="/impressum.html"
+            >impressum</a
+          >
+        </li>
+      </div>
+
+      <div class="credit">
+        &copy;2023, gemacht mit viel &hearts; von Ramazan ÖZGÜVEN.
+      </div>
+      <a class="gotopbtn" href="#"><i class="fa-solid fa-arrow-up"></i></a>
+    </section>
+
+    <!--! FOOTER END -->
+  </body>
+</html>
