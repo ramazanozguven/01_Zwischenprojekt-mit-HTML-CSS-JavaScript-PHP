@@ -1,16 +1,6 @@
 <?php
 
-// POST verisi üzerinde reCAPTCHA doğrulamasını yapmak için API'yi çağırın.
-$recaptcha_response = $_POST['g-recaptcha-response'];
-$secret_key = "6LdrVKImAAAAALLzWfrcFvgYM2rQCZRR0idpNeTT";
-$ip = $_SERVER['REMOTE_ADDR'];
 
-$url = 'https://www.google.com/recaptcha/api/siteverify';
-$data = array(
-    'secret' => $secret_key,
-    'response' => $recaptcha_response,
-    'remoteip' => $ip
-);
 
 $options = array(
     'http' => array(
